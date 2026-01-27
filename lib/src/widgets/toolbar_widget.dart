@@ -1969,7 +1969,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                                     left: 5, right: 5),
                                                 elevation: 0.0),
                                             onPressed: () async {
-                                              result = await FilePicker.pickFiles(
+                                              result = await FilePicker.platform.pickFiles(
                                                 type: FileType.image,
                                                 withData: true,
                                                 allowedExtensions: widget
@@ -2130,7 +2130,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                                   left: 5, right: 5),
                                               elevation: 0.0),
                                           onPressed: () async {
-                                            result = await FilePicker.pickFiles(
+                                            result = await FilePicker.platform
+                                                .pickFiles(
                                               type: FileType.audio,
                                               withData: true,
                                               allowedExtensions: widget
@@ -2282,7 +2283,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                                   left: 5, right: 5),
                                               elevation: 0.0),
                                           onPressed: () async {
-                                            result = await FilePicker.pickFiles(
+                                            result = await FilePicker.platform
+                                                .pickFiles(
                                               type: FileType.video,
                                               withData: true,
                                               allowedExtensions: widget
@@ -2434,7 +2436,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                                   left: 5, right: 5),
                                               elevation: 0.0),
                                           onPressed: () async {
-                                            result = await FilePicker.pickFiles(
+                                            result = await FilePicker.platform
+                                                .pickFiles(
                                               type: FileType.any,
                                               withData: true,
                                               allowedExtensions: widget
