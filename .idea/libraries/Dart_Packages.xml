@@ -82,7 +82,7 @@
         <entry key="file_picker">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-10.3.8/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-10.3.10/lib" />
             </list>
           </value>
         </entry>
@@ -443,7 +443,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dbus-0.7.11/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fake_async-1.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ffi-2.1.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-10.3.8/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-10.3.10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flex_color_picker-3.7.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flex_seed_scheme-3.6.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_inappwebview-6.1.5/lib" />
