@@ -12,12 +12,17 @@ dependencies:
   flutter:
     sdk: flutter
   # webview plugin
-  flutter_inappwebview: ^6.0.0
+  #flutter_inappwebview: ^6.0.0
+  zikzak_inappwebview: ^4.0.0
   # plugin to get webview's visible fraction for keyboard height adjustment
   visibility_detector: ^0.4.0+2
   # plugin to get when the keyboard is hidden via back (Android)
   # or "done" (iOS) to reset the editor's height
-  flutter_keyboard_visibility: ^6.0.0
+  flutter_keyboard_visibility:
+    git:
+      url: https://github.com/wenkaifan0720/flutter_keyboard_visibility
+      path: flutter_keyboard_visibility
+
   # plugin to show a color picker for foreground/highlight color
   flex_color_picker: ^3.7.0
   # plugin to get files from filesystem
