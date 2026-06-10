@@ -205,7 +205,7 @@ class HtmlEditorController extends unsupported.HtmlEditorController {
   void resetHeight() {
     _evaluateJavascript(
         source:
-            "window.flutter_inappwebview.callHandler('setHeight', 'reset');");
+            "window.zikzak_inappwebview.callHandler('setHeight', 'reset');");
   }
 
   /// Recalculates the height of the editor to remove any vertical scrolling.
@@ -214,7 +214,7 @@ class HtmlEditorController extends unsupported.HtmlEditorController {
   void recalculateHeight() {
     _evaluateJavascript(
         source:
-            "var height = document.body.scrollHeight; window.flutter_inappwebview.callHandler('setHeight', height);");
+            "var height = document.body.scrollHeight; window.zikzak_inappwebview.callHandler('setHeight', height);");
   }
 
   /// Add a notification to the bottom of the editor. This is styled similar to

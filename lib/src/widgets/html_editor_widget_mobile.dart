@@ -252,7 +252,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               if (!allowedKeys && \$(e.target).text().length >= ${widget.htmlEditorOptions.characterLimit}) {
                                   e.preventDefault();
                               }''' : ''}
-                              window.flutter_inappwebview.callHandler('totalChars', totalChars);
+                              window.zikzak_inappwebview.callHandler('totalChars', totalChars);
                           },
                       ''';
                       if (widget.plugins.isNotEmpty) {
@@ -272,12 +272,12 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                                 """
                               \nsummernoteAtMention: {
                                 getSuggestions: async function(value) {
-                                  var result = await window.flutter_inappwebview.callHandler('getSuggestions', value);
+                                  var result = await window.zikzak_inappwebview.callHandler('getSuggestions', value);
                                   var resultList = result.split(',');
                                   return resultList;
                                 },
                                 onSelect: (value) => {
-                                  window.flutter_inappwebview.callHandler('onSelectMention', value);
+                                  window.zikzak_inappwebview.callHandler('onSelectMention', value);
                                 },
                               },
                             """;
@@ -305,7 +305,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           summernoteCallbacks = summernoteCallbacks +
                               """
                               onImageLinkInsert: function(url) {
-                                window.flutter_inappwebview.callHandler('onImageLinkInsert', url);
+                                window.zikzak_inappwebview.callHandler('onImageLinkInsert', url);
                               },
                             """;
                         }
@@ -325,7 +325,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                                      'type': files[0].type,
                                      'base64': base64
                                   };
-                                  window.flutter_inappwebview.callHandler('onImageUpload', JSON.stringify(newObject));
+                                  window.zikzak_inappwebview.callHandler('onImageUpload', JSON.stringify(newObject));
                                 };
                                 reader.onerror = function (_) {
                                   var newObject = {
@@ -336,7 +336,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                                      'type': files[0].type,
                                      'base64': base64
                                   };
-                                  window.flutter_inappwebview.callHandler('onImageUpload', JSON.stringify(newObject));
+                                  window.zikzak_inappwebview.callHandler('onImageUpload', JSON.stringify(newObject));
                                 };
                                 reader.readAsDataURL(files[0]);
                               },
@@ -347,7 +347,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               """
                                 onImageUploadError: function(file, error) {
                                   if (typeof file === 'string') {
-                                    window.flutter_inappwebview.callHandler('onImageUploadError', file, error);
+                                    window.zikzak_inappwebview.callHandler('onImageUploadError', file, error);
                                   } else {
                                     var newObject = {
                                        'lastModified': file.lastModified,
@@ -356,7 +356,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                                        'size': file.size,
                                        'type': file.type,
                                     };
-                                    window.flutter_inappwebview.callHandler('onImageUploadError', JSON.stringify(newObject), error);
+                                    window.zikzak_inappwebview.callHandler('onImageUploadError', JSON.stringify(newObject), error);
                                   }
                                 },
                             """;
@@ -378,7 +378,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           });
                           
                           \$('#summernote-2').on('summernote.change', function(_, contents, \$editable) {
-                            window.flutter_inappwebview.callHandler('onChangeContent', contents);
+                            window.zikzak_inappwebview.callHandler('onChangeContent', contents);
                           });
                       
                           function onSelectionChange() {
@@ -439,7 +439,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               'lineHeight': lineHeight,
                               'direction': direction,
                             };
-                            window.flutter_inappwebview.callHandler('FormatSettings', message);
+                            window.zikzak_inappwebview.callHandler('FormatSettings', message);
                           }
                       """);
                       await controller.evaluateJavascript(
@@ -451,7 +451,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                       if ((Theme.of(context).brightness == Brightness.dark ||
                               widget.htmlEditorOptions.darkMode == true) &&
                           widget.htmlEditorOptions.darkMode != false) {
-                        //todo fix for iOS (https://github.com/pichillilorenzo/flutter_inappwebview/issues/695)
+                        //todo fix for iOS (https://github.com/pichillilorenzo/zikzak_inappwebview/issues/695)
                         var darkCSS =
                             '<link href=\"${(widget.htmlEditorOptions.filePath != null ? "file:///android_asset/flutter_assets/packages/html_editor_enhanced/assets/" : "") + "summernote-lite-dark.css"}\" rel=\"stylesheet\">';
                         await controller.evaluateJavascript(
@@ -482,7 +482,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                             });
                         await controller.evaluateJavascript(
                             source:
-                                "var height = document.body.scrollHeight; window.flutter_inappwebview.callHandler('setHeight', height);");
+                                "var height = document.body.scrollHeight; window.zikzak_inappwebview.callHandler('setHeight', height);");
                       }
                       //reset the editor's height if the keyboard disappears at any point
                       if (widget.htmlEditorOptions.adjustHeightForKeyboard) {
@@ -557,97 +557,97 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
     if (c.onBeforeCommand != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.before.command', function(_, contents) {
-            window.flutter_inappwebview.callHandler('onBeforeCommand', contents);
+            window.zikzak_inappwebview.callHandler('onBeforeCommand', contents);
           });
         """);
     }
     if (c.onChangeCodeview != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.change.codeview', function(_, contents, \$editable) {
-            window.flutter_inappwebview.callHandler('onChangeCodeview', contents);
+            window.zikzak_inappwebview.callHandler('onChangeCodeview', contents);
           });
         """);
     }
     if (c.onDialogShown != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.dialog.shown', function() {
-            window.flutter_inappwebview.callHandler('onDialogShown', 'fired');
+            window.zikzak_inappwebview.callHandler('onDialogShown', 'fired');
           });
         """);
     }
     if (c.onEnter != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.enter', function() {
-            window.flutter_inappwebview.callHandler('onEnter', 'fired');
+            window.zikzak_inappwebview.callHandler('onEnter', 'fired');
           });
         """);
     }
     if (c.onFocus != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.focus', function() {
-            window.flutter_inappwebview.callHandler('onFocus', 'fired');
+            window.zikzak_inappwebview.callHandler('onFocus', 'fired');
           });
         """);
     }
     if (c.onBlur != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.blur', function() {
-            window.flutter_inappwebview.callHandler('onBlur', 'fired');
+            window.zikzak_inappwebview.callHandler('onBlur', 'fired');
           });
         """);
     }
     if (c.onBlurCodeview != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.blur.codeview', function() {
-            window.flutter_inappwebview.callHandler('onBlurCodeview', 'fired');
+            window.zikzak_inappwebview.callHandler('onBlurCodeview', 'fired');
           });
         """);
     }
     if (c.onKeyDown != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.keydown', function(_, e) {
-            window.flutter_inappwebview.callHandler('onKeyDown', e.keyCode);
+            window.zikzak_inappwebview.callHandler('onKeyDown', e.keyCode);
           });
         """);
     }
     if (c.onKeyUp != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.keyup', function(_, e) {
-            window.flutter_inappwebview.callHandler('onKeyUp', e.keyCode);
+            window.zikzak_inappwebview.callHandler('onKeyUp', e.keyCode);
           });
         """);
     }
     if (c.onMouseDown != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.mousedown', function(_) {
-            window.flutter_inappwebview.callHandler('onMouseDown', 'fired');
+            window.zikzak_inappwebview.callHandler('onMouseDown', 'fired');
           });
         """);
     }
     if (c.onMouseUp != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.mouseup', function(_) {
-            window.flutter_inappwebview.callHandler('onMouseUp', 'fired');
+            window.zikzak_inappwebview.callHandler('onMouseUp', 'fired');
           });
         """);
     }
     if (c.onPaste != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.paste', function(_) {
-            window.flutter_inappwebview.callHandler('onPaste', 'fired');
+            window.zikzak_inappwebview.callHandler('onPaste', 'fired');
           });
         """);
     }
     if (c.onScroll != null) {
       widget.controller.editorController!.evaluateJavascript(source: """
           \$('#summernote-2').on('summernote.scroll', function(_) {
-            window.flutter_inappwebview.callHandler('onScroll', 'fired');
+            window.zikzak_inappwebview.callHandler('onScroll', 'fired');
           });
         """);
     }
   }
 
-  /// creates flutter_inappwebview JavaScript Handlers to handle any callbacks the
+  /// creates zikzak_inappwebview JavaScript Handlers to handle any callbacks the
   /// user has defined
   void addJSHandlers(Callbacks c) {
     if (c.onBeforeCommand != null) {

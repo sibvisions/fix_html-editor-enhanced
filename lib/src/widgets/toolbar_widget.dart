@@ -420,7 +420,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                       await widget.controller.editorController!
                                           .evaluateJavascript(
                                               source:
-                                                  "var height = \$('div.note-editable').outerHeight(true); window.flutter_inappwebview.callHandler('setHeight', height);");
+                                                  "var height = \$('div.note-editable').outerHeight(true); window.zikzak_inappwebview.callHandler('setHeight', height);");
                                     }
                                   },
                                 ),
@@ -448,7 +448,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                 await widget.controller.editorController!
                                     .evaluateJavascript(
                                         source:
-                                            "var height = \$('div.note-editable').outerHeight(true); window.flutter_inappwebview.callHandler('setHeight', height);");
+                                            "var height = \$('div.note-editable').outerHeight(true); window.zikzak_inappwebview.callHandler('setHeight', height);");
                               }
                             }),
                           ),
