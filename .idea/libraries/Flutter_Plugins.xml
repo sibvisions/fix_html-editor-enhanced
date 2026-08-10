@@ -4,19 +4,26 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility_macos-1.0.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility_linux-1.0.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility_windows-1.0.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor_web-0.10.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor-0.10.1+2" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor_ios-0.10.1+1" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-10.3.10" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webview_windows-0.4.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_macos-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_linux-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_web-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_ios-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_android-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview-4.3.3" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_windows-4.3.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor_web-0.10.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor_ios-0.10.1+1" />
       <root url="file://$USER_HOME$/.pub-cache/git/flutter_keyboard_visibility-b39c1d0ca1671458e4daf3eea2ebe11741f9bcf3/flutter_keyboard_visibility" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointer_interceptor-0.10.1+2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-11.0.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/jni-1.0.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_android-2.3.1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/jni_flutter-1.0.2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_macos-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.1.6" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_ios-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_linux-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_web-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_windows-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zikzak_inappwebview_android-4.7.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_foundation-2.6.0" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
