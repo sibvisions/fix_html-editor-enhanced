@@ -9,16 +9,16 @@ import PackageDescription
 let package = Package(
     name: "FlutterGeneratedPluginSwiftPackage",
     platforms: [
-        .iOS("13.0")
+        .iOS("15.0")
     ],
     products: [
         .library(name: "FlutterGeneratedPluginSwiftPackage", type: .static, targets: ["FlutterGeneratedPluginSwiftPackage"])
     ],
     dependencies: [
-        .package(name: "file_picker_darwin", path: "../.packages/file_picker_darwin-1.0.1"),
-        .package(name: "flutter_keyboard_visibility", path: "../.packages/flutter_keyboard_visibility"),
+        .package(name: "file_picker_darwin", path: "../.packages/file_picker_darwin-1.0.3"),
+        .package(name: "flutter_keyboard_visibility", path: "../.packages/flutter_keyboard_visibility-7.0.1"),
         .package(name: "pointer_interceptor_ios", path: "../.packages/pointer_interceptor_ios-0.10.1+1"),
-        .package(name: "zikzak_inappwebview_ios", path: "../.packages/zikzak_inappwebview_ios-5.0.0"),
+        .package(name: "zikzak_inappwebview_ios", path: "../.packages/zikzak_inappwebview_ios-5.1.2"),
         .package(name: "FlutterFramework", path: "../.packages/FlutterFramework")
     ],
     targets: [
