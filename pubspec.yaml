@@ -32,6 +32,8 @@ dependencies:
   # plugin for @internal annotation
   meta: '>=1.0.0 <2.0.0'
 
+  material_ui: any
+  web: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
