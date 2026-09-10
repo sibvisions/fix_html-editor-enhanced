@@ -18,7 +18,7 @@ let package = Package(
         .package(name: "file_picker_darwin", path: "../.packages/file_picker_darwin-1.1.0"),
         .package(name: "flutter_keyboard_visibility", path: "../.packages/flutter_keyboard_visibility-7.0.1"),
         .package(name: "pointer_interceptor_ios", path: "../.packages/pointer_interceptor_ios-0.10.1+1"),
-        .package(name: "zikzak_inappwebview_ios", path: "../.packages/zikzak_inappwebview_ios-5.3.4"),
+        .package(name: "zikzak_inappwebview_ios", path: "../.packages/zikzak_inappwebview_ios-6.0.0"),
         .package(name: "FlutterFramework", path: "../.packages/FlutterFramework")
     ],
     targets: [
